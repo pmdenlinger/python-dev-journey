@@ -9,6 +9,7 @@
 - **purview_helpers** (`projects/purview_helpers`)  
   Small helpers and notebooks to explore data labeling, retention ideas, and audit-friendly
   reporting patterns.
+  This is an adjunct to my learning and earning Microsoft certification, applied skills for Purview with main focus on data governance, security and ediscovery. 
 
 ## Architecture Docs
 - ADR‑0001: Use **uv** for reproducible envs and **marimo** for notebooks

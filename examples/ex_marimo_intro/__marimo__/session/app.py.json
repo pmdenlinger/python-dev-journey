@@ -1,7 +1,7 @@
 {
   "version": "1",
   "metadata": {
-    "marimo_version": "0.19.7"
+    "marimo_version": "0.18.4"
   },
   "cells": [
     {
@@ -12,9 +12,29 @@
     },
     {
       "id": "MJUe",
-      "code_hash": "6dc11c09506280a5a80b2f80332d69fe",
+      "code_hash": "8a7822e443f127d26c9210870fe3711b",
       "outputs": [],
       "console": []
+    },
+    {
+      "id": "VTpc",
+      "code_hash": "34fcd36e914ae085cbb4c8f69214f39e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Hello world!\n",
+          "mimetype": "text/plain"
+        }
+      ]
     }
   ]
 }
