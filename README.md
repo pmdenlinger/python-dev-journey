@@ -56,15 +56,18 @@ Project mode                           Sandbox mode
 
 **marimo** is a reactive notebook that stores notebooks as plain **`.py`** files instead of JSON, which makes them git‑friendly, script‑runnable, and easy to reuse. You edit with `marimo edit`, run as an app with `marimo run`, and convert from Jupyter with `marimo convert`. [\[marketplac...studio.com\]](https://marketplace.visualstudio.com/items?itemName=marimo-team.vscode-marimo), [\[pypi.org\]](https://pypi.org/project/pep723/), [\[docs.marimo.io\]](https://docs.marimo.io/guides/package_management/using_uv/)
 
+```
 marimo edit file.py              # open notebook editor       [3](https://pypi.org/project/pep723/)
 marimo run file.py               # run as read‑only app       [3](https://pypi.org/project/pep723/)
 marimo convert in.ipynb -o out.py# convert Jupyter→marimo     [3](https://pypi.org/project/pep723/)
 marimo export file.py --html     # export notebook            [3](https://pypi.org/project/pep723/)
 marimo tutorial intro            # launch built‑in tutorial   [3](https://pypi.org/project/pep723/)
 marimo check file.py             # lint/format marimo file    [4](https://docs.marimo.io/guides/package_management/using_uv/)
+```
 
 **uv** is a modern, fast Python package & environment manager. marimo integrates tightly with uv in two workflows: (1) **project notebooks** that use the repo’s `pyproject.toml`; and (2) **sandboxed notebooks** that declare their own deps inline in the file. [\[pydevtools.com\]](https://pydevtools.com/handbook/how-to/how-to-write-a-self-contained-script/), [\[github.com\]](https://github.com/python/peps/blob/main/peps/pep-0723.rst)
 
+```
 uv venv                          # create project venv        [2](https://github.com/python/peps/blob/main/peps/pep-0723.rst)
 uv sync                          # install project deps       [2](https://github.com/python/peps/blob/main/peps/pep-0723.rst)
 uv sync --all-extras --dev       # install dev + extras       [2](https://github.com/python/peps/blob/main/peps/pep-0723.rst)
@@ -74,6 +77,7 @@ uv run CMD                       # run tool in project env    [2](https://github
 uvx marimo edit nb.py            # run notebook (sandbox)     [1](https://pydevtools.com/handbook/how-to/how-to-write-a-self-contained-script/)
 uvx --reinstall marimo edit nb.py# rebuild sandbox env        [1](https://pydevtools.com/handbook/how-to/how-to-write-a-self-contained-script/)
 uv init NAME                     # create new uv project      [1](https://pydevtools.com/handbook/how-to/how-to-write-a-self-contained-script/)
+```
 
 **PEP 723** defines **inline script metadata**—a standardized way to put dependencies and Python version requirements _inside a single file_. Tools (like uv) read this metadata, create an isolated env, install exactly those deps, and run the file. This is what powers marimo’s **sandboxed notebooks**. [\[startdatae...eering.com\]](https://www.startdataengineering.com/post/python-notebook-best-practices-for-data-engineering/)
 
