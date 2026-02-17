@@ -143,6 +143,54 @@ marimo gives me:
 
 ---
 
+## FAQ (Quick)
+```
+**Do I need PEP 723 for every notebook?**  
+No.  
+• Use it for **sandboxed notebooks** (per‑file env). [1](https://pydevtools.com/handbook/how-to/how-to-write-a-self-contained-script/)  
+• Skip it for **project notebooks** using `pyproject.toml`. [2](https://github.com/python/peps/blob/main/peps/pep-0723.rst)
+
+**When should I use sandbox mode vs project mode?**  
+• **Sandbox mode (`uvx`)** → examples, tutorials, experiments, isolated deps. [1](https://pydevtools.com/handbook/how-to/how-to-write-a-self-contained-script/)  
+• **Project mode (`uv run`)** → shared deps, coherent repos, real workflows. [2](https://github.com/python/peps/blob/main/peps/pep-0723.rst)
+
+**Why does marimo use `.py` files instead of `.ipynb`?**  
+Because marimo notebooks are pure Python modules: git‑friendly, importable, script‑runnable, and reactive. [3](https://marketplace.visualstudio.com/items?itemName=marimo-team.vscode-marimo)
+
+**Where do I install packages for a notebook?**  
+• Project mode → `uv add package` (updates `pyproject.toml`). [1](https://pydevtools.com/handbook/how-to/how-to-write-a-self-contained-script/)  
+• Sandbox mode → `uv add --script nb.py package` (updates PEP 723 block). [1](https://pydevtools.com/handbook/how-to/how-to-write-a-self-contained-script/)
+
+**How does uv know what to install for sandboxed notebooks?**  
+uv reads the notebook’s inline PEP 723 metadata and builds a per‑file environment automatically. [4](https://www.startdataengineering.com/post/python-notebook-best-practices-for-data-engineering/)
+
+**What if I remove a dependency but the environment doesn’t update?**  
+Force rebuild:  
+`uvx --reinstall marimo edit nb.py`  
+uv normally caches sandbox envs for speed. [1](https://pydevtools.com/handbook/how-to/how-to-write-a-self-contained-script/)
+
+**How do I fix SQL cell errors?**  
+Install marimo’s SQL extras:  
+`uv add "marimo[sql]"` (project)  
+`uv add --script nb.py "marimo[sql]"` (sandbox)  
+SQL cells require optional SQL dependencies. [5](https://stackoverflow.com/questions/46775346/what-do-square-brackets-mean-in-pip-install)
+
+**Can notebooks import project code?**  
+• Project mode → Yes, automatically (shared environment).  
+• Sandbox mode → Add the project as editable:  
+  `uv add --script nb.py . --editable`  
+(uv updates PEP 723 metadata accordingly.) [1](https://pydevtools.com/handbook/how-to/how-to-write-a-self-contained-script/)
+
+**Should all notebooks share the same dependencies?**  
+Not in sandbox mode.  
+Each notebook should declare **only what it uses** in its PEP 723 block.  
+This is the whole purpose of per‑file environments. [4](https://www.startdataengineering.com/post/python-notebook-best-practices-for-data-engineering/)
+
+**Is marimo a replacement for Jupyter?**  
+For many workflows, yes: marimo provides reactive execution, no hidden state, pure `.py` notebooks, SQL tooling, and app deployment. [3](https://marketplace.visualstudio.com/items?itemName=marimo-team.vscode-marimo)
+```
+---
+
 ## Tooling
 
 - **Python:** 3.11+
