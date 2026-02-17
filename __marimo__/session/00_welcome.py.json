@@ -1,0 +1,34 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.19.8"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "LfcZ",
+      "code_hash": "7f9e869133ec86dd8316e6610419e87e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Hello, World!\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    }
+  ]
+}
