@@ -8,9 +8,12 @@ authors = [
   { name = "Paul Denlinger" }
 ]
 dependencies = [
-  "marimo>=0.7",
+  "marimo[recommended,sql]>=0.7",
   "typer>=0.9",
   "pandas>=2.0",
+  "ruff>=0.15.0",
+  "pytest>=9.0.2",
+  "polars>=1.38.1",
 ]
 
 [project.optional-dependencies]
