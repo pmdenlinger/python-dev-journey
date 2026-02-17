@@ -166,6 +166,46 @@ uv run ruff check .
 uv run pytest -q
 ```
 
+## Troubleshooting (Quick)
+
+```
+• SQL cell errors (“sqlglot is required”):
+    Install SQL extras:
+        uv add "marimo[sql]"          # project mode
+        uv add --script nb.py "marimo[sql]"   # sandbox mode
+    (marimo SQL cells require optional SQL dependencies.) [1](https://stackoverflow.com/questions/46775346/what-do-square-brackets-mean-in-pip-install)
+
+• ImportError when running a sandboxed notebook:
+    Add the missing package to the notebook’s PEP 723 block:
+        uv add --script nb.py package
+    (uv updates the inline metadata for per‑file environments.) [2](https://pydevtools.com/handbook/how-to/how-to-write-a-self-contained-script/)
+
+• Notebook environment didn’t update after editing dependencies:
+    Force rebuild:
+        uvx --reinstall marimo edit nb.py
+    (uv may reuse cached envs unless forced to rebuild.) [2](https://pydevtools.com/handbook/how-to/how-to-write-a-self-contained-script/)
+
+• Using project mode but imports still fail:
+    Ensure dependency is in pyproject.toml:
+        uv add package
+    and relaunch with:
+        uv run marimo edit nb.py
+    (Project notebooks use the project venv, not sandboxed metadata.) [3](https://github.com/python/peps/blob/main/peps/pep-0723.rst)
+
+• Unsure whether to use `uv run` or `uvx`:
+    uv run → project environment (shared)
+    uvx     → sandbox environment (per‑notebook)
+    (uvx executes using inline script metadata.) [2](https://pydevtools.com/handbook/how-to/how-to-write-a-self-contained-script/)
+
+• marimo UI opens but code doesn’t run:
+    Ensure notebook begins with valid PEP 723 header if using sandbox mode:
+        # /// script
+        # requires-python = ">=3.11"
+        # dependencies = [...]
+        # ///
+    (PEP 723 defines the inline metadata format tools rely on.) [4](https://www.startdataengineering.com/post/python-notebook-best-practices-for-data-engineering/)
+```
+
 ---
 
 ## Status Badges
