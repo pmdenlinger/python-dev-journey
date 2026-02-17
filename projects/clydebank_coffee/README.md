@@ -207,6 +207,6 @@ _(Add/renumber as needed; link to files once created.)_
 
 ## License
 
-This project is from the book Python QuickStart Guide and the Github repo is at https://github.com/clydebankmedia/python-quickstartguide and license is at https://github.com/clydebankmedia/python-quickstartguide?tab=License-1-ov-file.
+This project is from the book Python QuickStart Guide (Robert Oliver) and the Github repo is at https://github.com/clydebankmedia/python-quickstartguide and license is at https://github.com/clydebankmedia/python-quickstartguide?tab=License-1-ov-file.
 
 ---
