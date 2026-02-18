@@ -44,3 +44,18 @@ customer2 = {
 }
 print(customer1["name"])
 
+# Multidimensional Lists
+# Daily high and low temperature
+# (in Fahrenheit)
+
+temps = [
+    [66, 34],
+    [57, 25],
+    [49, 45]
+]
+
+today = (temps[0])
+print(today)
+print(today[0])
+print(temps[2][1])
+
