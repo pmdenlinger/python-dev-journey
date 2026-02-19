@@ -51,3 +51,4 @@ cup_price = input("What do you want to charge per cup of coffee? ")
 print("\nGreat. Here's what we collected so far.\n")
 print("Your name is " + name + " and you're opening " + shop_name + "!")
 print("Your first cup of coffee will sell for $" + cup_price +".\n")
+
