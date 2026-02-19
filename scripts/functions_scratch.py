@@ -36,11 +36,27 @@
 
 # For keyword arguments, the sequence for the default values does not matter. They are useful when a function takes more than two parameters # and it's difficult to remember the order. They are also useful when the function will expand later with more arguments, instead of making # # multiple edits to the code. There is no performace penalty for running the code. If a function uses keyword arguments, they should be # # # # supplied for each function.
 
-def full_name(first, middle, last, display = False):
-    name = first + " " + middle + " " + last
-    if display:
-        print(name)
-    return(name)
+# def full_name(first, middle, last, display = False):
+#     name = first + " " + middle + " " + last
+#     if display:
+#         print(name)
+#     return(name)
 
 # print(full_name(first = "Robert", middle = "W", last = "Oliver"))
-print(full_name(last = "Oliver", first = "Robert", middle = "W"))
+# print(full_name(last = "Oliver", first = "Robert", middle = "W"))
+
+# For arbitrary arguments, the name of a tuple must be supplied, not the names of individual arguments. Tuples are immutable and are # # # # # read-only. The asterick in front of argument indicates it will be arbitrary argument.
+
+# Define the average function
+# def average(*numbers):
+#     sum = 0
+#     for n in numbers: 
+#         # Add n to sum
+#         # (+= means add n to sum and store in sum)
+#         sum += n
+#     return sum / len(numbers)
+
+# Use our newly minted function
+# print(average(10, 40, 80, 74, 16, 42, 12, 6))  
+# 
+print(len("Hello, World!"))  
