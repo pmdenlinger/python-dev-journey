@@ -23,4 +23,4 @@ for _ in bottles_song():
     # Don't do anything as the generator does the printing
     pass 
 
-# In a generator function, yield stops the generator function until it is called again.
+# In a generator function, yield stops the generator function until it is called again by the next cycle of the loop.
