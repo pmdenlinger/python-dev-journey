@@ -34,8 +34,22 @@
 #     print(c.name + " lives in " + c.city + ".")
 
 # Define the World class
-class World:
+# class World:
     # Define our greeting
-    greeting = "Hello, World!"
+    # greeting = "Hello, World!"
 
-print(World.greeting)    
+# print(World.greeting)    
+
+# This variable exists in the main scope
+name = "Sarah"
+
+# Define a new class with a class variable called name
+class Customer:
+    name = "Robert"
+
+# Create a new customer so that __init__ is called
+customer = Customer()
+
+# Display the nmae in the main scope
+print(customer.name)
+
