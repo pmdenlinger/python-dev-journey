@@ -57,13 +57,26 @@
 name = "Sarah"
 
 # Define a new class with a class variable called name
-class Customer:
-    def __init__(self, name):
-        self.name = name
+# class Customer:
+#     def __init__(self, name):
+#         self.name = name
 
 # Create a new customer so that __init__ is called
-customer = Customer("Robert")
+# customer = Customer("Robert")
 
 # Display the name in the main scope
-print(customer.name)
+# 
+
+# Define a new class
+class Customer:
+    # Define the init method, using name and city as arguments
+                def __init__(self, name, city):
+                        self.name = name
+                        self.city = city
+
+# Create three objects based on the Customer class
+# The name and city are passed to __init__
+c1 = Customer("Sarah", "Atlanta")
+c2 = Customer("Robert", "Florence")
+c3 = Customer("Thomas", "Denver")
 
