@@ -62,7 +62,7 @@ while not shop_name:
 
 # We have what we need, so let's get started!
 
-print("nOk, let's get started. Have fun!")
+print("\nOk, let's get started. Have fun!")
 
 # The main game loop
 running = True
