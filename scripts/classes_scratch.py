@@ -1,12 +1,34 @@
 # Define the world class
-class World:
+# class World:
     # Define our greeting
-    greeting = "Hello, World!"
+    # greeting = "Hello, World!"
 
     # Run this whenever the object is created
-    def __init__(self):
+    # def __init__(self):
         # Print the greeting
-        print(self.greeting)
+        # print(self.greeting)
 
 # Use the class World to create a world object named w
-w = World()    
+# w = World()
+# 
+# Define a new class
+class Customer: 
+    def __init__(self, name, city):
+        self.name = name
+        self.city = city
+
+    def greet(self):
+        print("Hello, " + self.name + "!")
+
+# Create three objects based on the Customer class
+c1 = Customer("Sarah", "Atlanta")
+c2 = Customer("Robert", "Florence")
+c3 = Customer("Thomas", "Denver")
+
+# Add the customer objects to a list
+customers = [c1, c2, c3]
+
+# Iterate through list, greet, then display information
+for c in customers:
+    c.greet()
+    print(c.name + " lives in " + c.city + ".")
