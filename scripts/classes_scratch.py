@@ -12,23 +12,30 @@
 # w = World()
 # 
 # Define a new class
-class Customer: 
-    def __init__(self, name, city):
-        self.name = name
-        self.city = city
+# class Customer: 
+#     def __init__(self, name, city):
+#         self.name = name
+#         self.city = city
 
-    def greet(self):
-        print("Hello, " + self.name + "!")
+#     def greet(self):
+#         print("Hello, " + self.name + "!")
 
 # Create three objects based on the Customer class
-c1 = Customer("Sarah", "Atlanta")
-c2 = Customer("Robert", "Florence")
-c3 = Customer("Thomas", "Denver")
+# c1 = Customer("Sarah", "Atlanta")
+# c2 = Customer("Robert", "Florence")
+# c3 = Customer("Thomas", "Denver")
 
 # Add the customer objects to a list
-customers = [c1, c2, c3]
+# customers = [c1, c2, c3]
 
 # Iterate through list, greet, then display information
-for c in customers:
-    c.greet()
-    print(c.name + " lives in " + c.city + ".")
+# for c in customers:
+#     c.greet()
+#     print(c.name + " lives in " + c.city + ".")
+
+# Define the World class
+class World:
+    # Define our greeting
+    greeting = "Hello, World!"
+
+print(World.greeting)    
