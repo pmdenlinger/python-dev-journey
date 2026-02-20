@@ -81,25 +81,32 @@
 # c3 = Customer("Thomas", "Denver")
 
 # Define a new class
-class Customer:
-    def __init__(self, name, city):
-        self.name = name
-        self.city = city
+# class Customer:
+#     def __init__(self, name, city):
+#         self.name = name
+#         self.city = city
 
-    def __enter__(self):
-        print("Entering scope")
+#     def __enter__(self):
+#         print("Entering scope")
         # Run code upon entering scope of with statement
-        return self
+        # return self
 
-    def __exit__(self, exc_type, exc_value, traceback):
-        print("Leaving scope.")
-        # Run code upon leaving scope of with statement
+    # def __exit__(self, exc_type, exc_value, traceback):
+    #     print("Leaving scope.")
+    #     # Run code upon leaving scope of with statement
 
-    def greet(self):
-        print("Hello, " + self.name + "!")
+    # def greet(self):
+    #     print("Hello, " + self.name + "!")
 
 # Use with to create a scope
-with Customer("Robert", "Florence") as robert:
-    robert.greet()    
+# with Customer("Robert", "Florence") as robert:
+    # robert.greet()    
 
+class World:
+        def __init__(self):
+                print("I'm alive!")
+        def __del__(self):
+                print("I'm gone!") 
 
+earth = World()
+del(earth)                       
