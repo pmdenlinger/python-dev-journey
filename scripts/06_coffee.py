@@ -26,6 +26,15 @@ def convert_to_float(s):
         f = 0
     return f
 
+def x_of_y(x, y):
+    num_list = []
+    # Return a list of x numbers of y
+    for i in range(x):
+        num_list.append(y)
+        return num_list
+    
+    
+
 # Current day number 
 day = 1
 
