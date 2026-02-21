@@ -33,76 +33,44 @@ def x_of_y(x, y):
         num_list.append(y)
         return num_list
     
-    
+class CoffeeShopSimulator:
 
-# Current day number 
-day = 1
+    # Minimum and maximum temperatures
+    TEMP_MIN = 20
+    TEMP_MAX = 90
 
-# Starting cash on hand
-cash = 100.00
+    def __init__(self, player_name, shop_name):
 
-# Coffee on hand (cups)
-coffee = 100
+        # Set player and coffee shop names
+        self.player_name = player_name
+        self.shop_name = shop_name
 
-# Sales list of dictionaries
-sales = [
-{ 
-        "day": 1,
-        "coffee_inv": 100,
-        "advertising": "10",
-        "temp": 68,
-        "cups_sold": 16
-    },
-{
-        "day": 2,
-        "coffee_inv": 84,
-        "advertising": "15",
-        "temp": 72,
-        "cups_sold": 20
-    },
-{
-        "day": 3,
-        "coffee_inv": 64,
-        "advertising": "5",
-        "temp": 78,
-        "cups_sold": 0
-    },
-]
- 
-# Create an empty sales list
-sales = []
+        # Current day number
+        self.day = 1
 
+        #Cash on hand at start
+        self.cash = 100.00
 
+        # Inventory at start
+        self.coffee_inventory = 100
 
-def daily_stats(cash_on_hand, weather_temp, coffee_inventory):
-    print("You have $" + str(cash_on_hand) + " cash on hand and the temperature is " + str(weather_temp) + ".")
-    print("You have enough coffee on hand to make " + str(coffee_inventory) + " cups.\n") 
+        # Sales list
+        self.sales = []
 
+        # Possible temperatures
+        self.temps = self.make_temp_distribution()
 
+    def run(self):
+        print("\nOk, let's get started. Have fun!")  
 
-def get_weather():
-    # Generate a random temperature between 20 and 90
-    # We'll consider seasons later on, but this is good enough for now
-    return randint(20, 90)
-
-
-# Print welcome message
-welcome()
-
-# Get name and store name
-name = prompt("What is your name?", True)
-shop_name = prompt("What do you want to name your coffee shop?", True)
-
-# We have what we need, so let's get started!
-print("\nOk, let's get started. Have fun!")
-
-# The main game loop
+        # The main game loop
 running = True
 while running:
     # Display the day and add a "fancy" text effect
-    print("\n-----| Day " + str(day) + " @ " + shop_name + " |-----")
+    self.day_header()
+    # print("\n-----| Day " + str(day) + " @ " + shop_name + " |-----")
 
-    temperature = get_weather()
+    
 
     # Display the cash and weather
     daily_stats(cash, temperature, coffee)
@@ -120,5 +88,38 @@ while running:
     # TODO: Display today's performance
 
     # Before we loop around, add a day
-    day += 1
+    day += 1  
+
+
+# Current day number 
+day = 1
+
+# Starting cash on hand
+cash = 100.00
+
+# Coffee on hand (cups)
+coffee = 100
+
+
+
+
+
+def daily_stats(cash_on_hand, weather_temp, coffee_inventory):
+    print("You have $" + str(cash_on_hand) + " cash on hand and the temperature is " + str(weather_temp) + ".")
+    print("You have enough coffee on hand to make " + str(coffee_inventory) + " cups.\n") 
+
+
+
+
+
+# Print welcome message
+welcome()
+
+# Get name and store name
+name = prompt("What is your name?", True)
+shop_name = prompt("What do you want to name your coffee shop?", True)
+
+
+
+
 
