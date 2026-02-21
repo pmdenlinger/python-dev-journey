@@ -64,31 +64,48 @@ class CoffeeShopSimulator:
         print("\nOk, let's get started. Have fun!")  
 
         # The main game loop
-running = True
-while running:
-    # Display the day and add a "fancy" text effect
-    self.day_header()
-    # print("\n-----| Day " + str(day) + " @ " + shop_name + " |-----")
+        running = True
+        while running:
+        # Display the day and add a "fancy" text effect
+        self.day_header()
+        # print("\n-----| Day " + str(day) + " @ " + shop_name + " |-----")
 
-    
+        # Get the weather
+        temperature = self.weather
 
-    # Display the cash and weather
-    daily_stats(cash, temperature, coffee)
+        # Display the cash and weather
+        self.daily_stats(temperature)
 
-    # Get price of a cup of coffee
-    cup_price = prompt("What do you want to charge per cup of coffee?")
+        # Get price of a cup of coffee
+        cup_price = float(
+            prompt("What do you want to charge per cup of coffee?"))
+        
+        # Get advertising spend
+        print("You can buy advertising to help promote sales.")
+        advertising = prompt("How much do you want to spend on advertising (0 for none)?",  False)
 
-    # Convert advertising into a float
-    advertising = convert_to_float(advertising)
+        # Convert advertising into a float
+        advertising = convert_to_float(advertising)
 
-    # Deduct advertising from cash on hand
-    cash -= advertising
+        # Deduct advertising from cash on hand
+        self.cash -= advertising
 
-    # TODO: Calculate today's performance
-    # TODO: Display today's performance
+        # Simulate today's sales
+        cups_sold = self.simulate(temperature, advertising, cup_price)
+        gross_profit = cups_sold * cup_price
 
-    # Before we loop around, add a day
-    day += 1  
+        # Display the results
+        print("You sold " + str(cups_sold) + " cups of coffee today.")
+        print("You made $" + str(gross_profit) + ".")
+
+        # Add the profit to our coffers
+        self.cash += gross_profit
+
+        # Subtract inventory
+        self.coffee_inventory -= cups_sold
+
+        # Before we loop around, add a day
+        day += 1  
 
 
 # Current day number 
