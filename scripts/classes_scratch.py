@@ -102,11 +102,43 @@
 # with Customer("Robert", "Florence") as robert:
     # robert.greet()    
 
-class World:
-        def __init__(self):
-                print("I'm alive!")
-        def __del__(self):
-                print("I'm gone!") 
+# class World:
+#         def __init__(self):
+#                 print("I'm alive!")
+#         def __del__(self):
+#                 print("I'm gone!") 
 
-earth = World()
-del(earth)                       
+# earth = World()
+# del(earth)  
+# 
+
+# Convert kilometers to miles
+
+# class Converter:
+#     def __init__(self, km):
+#         self.km = km
+#     def to_miles(self):
+#         return self.km / 1.609
+        
+    # Convert three kilometers to miles
+# distance1 = Converter(3)
+# print(distance1.to_miles)
+
+# Use properties instead of instance variables
+
+class Distance:
+    def __init__(self, km):
+        self._km = km
+    @property
+    def km(self):
+        return self._km
+    @property
+    def miles(self):
+        return self._km / 1.609
+    
+distance2 = Distance(3)
+print(str(distance2.km))
+print(str(distance2.miles))    
+
+
+                         
