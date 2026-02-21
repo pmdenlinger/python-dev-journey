@@ -1,9 +1,30 @@
 # ClydeBank Coffee Shop Simulator 4000
 # Copyright 2026 (C) ClydeBank Media, All Rights Reserved.
 
-# Import items from the random module to generate weather
-from random import seed
-from random import randint
+# Import the random module
+import random
+
+def welcome():
+    print("ClydeBank Coffee Simulator 4000, Version 2.00")
+    print("Copyright (C) 2026 ClydeBank Media, All Rights Reserved.\n")
+    print("Let's collect some information before we start the game.\n")
+
+def prompt(display="Please input a string", require=True):
+    if require:
+        s = False
+        while not s:
+            s = input(display + " ")
+    else:
+        s = input(display + " ")
+    return s
+
+def convert_to_float(s):
+    # If conversion fails, assign it to 0
+    try:
+        f = float(s)
+    except ValueError:
+        f = 0
+    return f
 
 # Current day number 
 day = 1
@@ -42,31 +63,13 @@ sales = [
 # Create an empty sales list
 sales = []
 
-def welcome():
-    print("ClydeBank Coffee Simulator 4000, Version 2.00")
-    print("Copyright (C) 2026 ClydeBank Media, All Rights Reserved.\n")
-    print("Let's collect some information before we start the game.\n")
 
-def prompt(display="Please input a string", require=True):
-    if require:
-        s = False
-        while not s:
-            s = input(display + " ")
-    else:
-        s = input(display + " ")
-    return s
 
 def daily_stats(cash_on_hand, weather_temp, coffee_inventory):
     print("You have $" + str(cash_on_hand) + " cash on hand and the temperature is " + str(weather_temp) + ".")
     print("You have enough coffee on hand to make " + str(coffee_inventory) + " cups.\n") 
 
-def convert_to_float(s):
-    # If conversion fails, assign it to 0
-    try:
-        f = float(s)
-    except ValueError:
-        f = 0
-    return f
+
 
 def get_weather():
     # Generate a random temperature between 20 and 90
