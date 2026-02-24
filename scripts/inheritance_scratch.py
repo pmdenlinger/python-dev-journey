@@ -19,3 +19,9 @@ class Furniture:
         def unfold(self):
             self.folded = False
             print("The chair is now unfolded and ready for use.")  
+
+# Add Bench class to demonstrate multi-level inheritance
+
+    class Bench(Chair):
+        pass             
+
