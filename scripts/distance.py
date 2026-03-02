@@ -4,7 +4,7 @@ class Distance:
 
     @property
     def km(self):
-        return self.km
+        return self._km
     
     @km.setter
     def km(self, value):
@@ -17,4 +17,3 @@ class Distance:
     @miles.setter 
     def miles(self, value):
         self._km = value * 1.609
-        
