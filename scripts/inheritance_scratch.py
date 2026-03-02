@@ -30,21 +30,43 @@
 
 # Add Table class to demonstrate multi-parent inheritance
 
+# class Furniture:
+#     def __init__(self, width=0, height=0, material="Wood"):
+#         self.width = width
+#         self.height = height
+#         self.material = material
+
+# class Surface:
+#     def __init__(self, flat):
+#         self.flat = flat
+
+# class Table:
+#     def __init__(self, width=0, height=0, material="Wood", flat=True):
+#         Furniture.__init__(self, width, height, material)
+#         Surface.__init__(self, flat)
+#         self.legs = 4
+
+# a = Table()
+# print(vars(a)) 
+
 class Furniture:
-    def __init__(self, width=0, height=0, material="Wood"):
-        self.width = width
-        self.height = height
-        self.material = material
+    pass
 
-class Surface:
-    def __init__(self, flat):
-        self.flat = flat
+class Chair(Furniture):
+    pass
 
-class Table:
-    def __init__(self, width=0, height=0, material="Wood", flat=True):
-        Furniture.__init__(self, width, height, material)
-        Surface.__init__(self, flat)
-        self.legs = 4
+class Stool(Chair):
+    def __init__(self, number):
+        self.number = number
 
-a = Table()
-print(vars(a)) 
+# Create an empty list named bar
+bar = []
+
+# Add 8 Stools to the Bar
+for i in range(8):
+    bar.append(Stool(i))
+
+bar[4].number = 54    
+
+print(bar[2].number) 
+print(bar[4].number)   
