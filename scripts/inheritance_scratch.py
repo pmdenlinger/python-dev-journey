@@ -49,24 +49,27 @@
 # a = Table()
 # print(vars(a)) 
 
-class Furniture:
-    pass
+# class Furniture:
+#     pass
 
-class Chair(Furniture):
-    pass
+# class Chair(Furniture):
+#     pass
 
-class Stool(Chair):
-    def __init__(self, number):
-        self.number = number
+# class Stool(Chair):
+#     def __init__(self, number):
+#         self.number = number
 
 # Create an empty list named bar
-bar = []
+# bar = []
 
 # Add 8 Stools to the Bar
-for i in range(8):
-    bar.append(Stool(i))
+# for i in range(8):
+#     bar.append(Stool(i))
 
-bar[4].number = 54    
+# bar[4].number = 54    
 
-print(bar[2].number) 
-print(bar[4].number)   
+# print(bar[2].number) 
+# print(bar[4].number) 
+# 
+
+  
