@@ -91,13 +91,25 @@
 # 
 
 # Import the regular expression engine
-import re
+# import re
 
 # Define our content
-text = "Hello, World!"
+# text = "Hello, World!"
 
 # Is "Hello" in our string?
-if re.search("hello", text, re.IGNORECASE):
-    print("hello is in the string")
-else:
-    print("hello isn't in the string.")
+# if re.search("hello", text, re.IGNORECASE):
+#     print("hello is in the string")
+# else:
+#     print("hello isn't in the string.")
+
+# Import the regular expression engine
+# import re
+
+# Define our content
+# text = "The quick gray fox jumped over the lazy dog!"
+
+# Find
+# match = re.search("(gray|grey)", text, re.IGNORECASE)
+
+# Print the match
+# print(match.group(0))
