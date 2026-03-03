@@ -28,10 +28,19 @@
 # 
 
 # A simple string
-fox = "The quick brown fox jumps over the lazy dog."
+# fox = "The quick brown fox jumps over the lazy dog."
 
 # Split the string
-fox_list = fox.split()
+# fox_list = fox.split()
 
 # Display the resulting list
-print(fox_list)
+# print(fox_list)
+
+# An (obviously) fake ID number
+id = "123-45-6789"
+
+# Split id by a dash character
+id_segments = id.split("-")
+
+# Display it
+print(id_segments)
