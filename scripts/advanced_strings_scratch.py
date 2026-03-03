@@ -37,10 +37,19 @@
 # print(fox_list)
 
 # An (obviously) fake ID number
-id = "123-45-6789"
+# id = "123-45-6789"
 
 # Split id by a dash character
-id_segments = id.split("-")
+# id_segments = id.split("-")
 
 # Display it
-print(id_segments)
+# print(id_segments)
+
+# New glossary terms
+# glossary = "delimiter, module, package, class, object"
+
+# Split by comma then a space
+# glossary_list = glossary.split(", ")
+
+# Display it
+# print(glossary_list)
