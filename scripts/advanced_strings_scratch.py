@@ -13,10 +13,25 @@
     # print(b)
 
 # Create our string
-title = "Python QuickStart Guide"
+# title = "Python QuickStart Guide"
 
 # Display it all uppercase
-print(title.upper())
+# print(title.upper())
 
 # Display it all lowercase
-print(title.lower())
+# print(title.lower())
+
+# Create our string
+#tongue_twister = "She sells seashells by the seashore."
+
+# Count the number of 's' in tongue_twister and display it
+# 
+
+# A simple string
+fox = "The quick brown fox jumps over the lazy dog."
+
+# Split the string
+fox_list = fox.split()
+
+# Display the resulting list
+print(fox_list)
