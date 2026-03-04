@@ -140,11 +140,24 @@ match_start = match.span()[0]
 match_end = match.span()[1]
 
 # Replacement text
-replace_text = "grey"
+# replace_text = "grey"
 
 # Replace gray with grey using the position from span
-new_text = text[:match_start] + replace_text + text[match_end:]
+# new_text = text[:match_start] + replace_text + text[match_end:]
 
 # Display results 
-print("Old text: " + text)
-print("New text: " + new_text)
+# print("Old text: " + text)
+# print("New text: " + new_text)
+
+# Import the regular expression engine
+import re
+
+# Define our content
+text = "The quick brown fox jumped over the lazy dog!"
+
+# Find
+match = re.search("(gray|grey)", text, re.IGNORECASE)
+
+# Print the match
+print(match.group(0))
+
