@@ -234,12 +234,18 @@
 # print(word_split)
 
 # Import the regular expression engine
-import re
+# import re
 
 # Our string
-test = "The quick brown fox is fast!"
+# test = "The quick brown fox is fast!"
 
 # Substitute spaces for +
-plus_test = re.sub("\s+", "+", test)
-print(plus_test)    
+# plus_test = re.sub("\s+", "+", test)
+# print(plus_test)  
+
+# Define the name
+name = "Robert"
+
+# Print a friendly message
+print("Hello, {}!".format(name))
 
