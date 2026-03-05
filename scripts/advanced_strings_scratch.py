@@ -260,8 +260,10 @@
 
 # print(message.format(total))
 
-first_day = "Monday"
-second_day = "Wednesday"
+# first_day = "Monday"
+# second_day = "Wednesday"
 
-print(f"We are closed this week from {first_day} till {second_day}.")
+# print(f"We are closed this week from {first_day} till {second_day}.")
+
+print(f"Testing evaluations in f-strings: {3 * 9}")
 
