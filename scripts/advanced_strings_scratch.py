@@ -191,14 +191,29 @@
 #     print("The string does not begin with H.")
 
 # Import the regular expression engine
-import re
+# import re
 
 # Define our content
-text = "Hello, World!"
+# text = "Hello, World!"
 
 # Does the string end in an exclamation point?
-if re.search("\!$", text):
-    print("The string ends with an exclamation point.")
-else:
-    print("The string doesn't end with an exclamation point.")
+# if re.search("\!$", text):
+#     print("The string ends with an exclamation point.")
+# else:
+#     print("The string doesn't end with an exclamation point.")
+
+# Import the regular expression engine
+import re
+
+# Our string
+test = "Hello, World!"
+
+# Match
+if re.match("e", test):
+    print("re.match says it has an e in it")
+
+# Search
+if re.search("e", test):
+    print("re.search says it has an e in it")
+    
 
