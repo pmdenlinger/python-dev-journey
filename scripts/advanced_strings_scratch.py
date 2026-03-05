@@ -179,14 +179,26 @@
     # print(match)
 
 # Import the regular expression engine
+# import re
+
+# Define our content
+# text = "Hello, World!"
+
+# Does the string begin with the letter H?
+# if re.search("^H", text):
+#     print("The string begins with H.")
+# else:
+#     print("The string does not begin with H.")
+
+# Import the regular expression engine
 import re
 
 # Define our content
 text = "Hello, World!"
 
-# Does the string begin with the letter H?
-if re.search("^H", text):
-    print("The string begins with H.")
+# Does the string end in an exclamation point?
+if re.search("\!$", text):
+    print("The string ends with an exclamation point.")
 else:
-    print("The string does not begin with H.")
+    print("The string doesn't end with an exclamation point.")
 
