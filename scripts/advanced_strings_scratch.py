@@ -162,19 +162,31 @@
 # print(match.group(0))
 
 # Import the regular expression engine
-import re
+# import re
 
 # Define our content
-text = "This is the house. It has red red paint."
+# text = "This is the house. It has red red paint."
 
 # Regular expression to find duplicate words
 # Use prefix r before to treat as raw (unescaped) string
-regex = r"\b(\w+)\s+\1\b"
+# regex = r"\b(\w+)\s+\1\b"
 
 # Find any duplicate words
-matches = re.findall(regex, text, re.IGNORECASE)
+# matches = re.findall(regex, text, re.IGNORECASE)
 
 # Print the duplicate words
-for match in matches:
-    print(match)
+# for match in matches:
+    # print(match)
+
+# Import the regular expression engine
+import re
+
+# Define our content
+text = "Hello, World!"
+
+# Does the string begin with the letter H?
+if re.search("^H", text):
+    print("The string begins with H.")
+else:
+    print("The string does not begin with H.")
 
