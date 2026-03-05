@@ -127,17 +127,17 @@
 #     print("Hello isn't in the string.")
 
 # Import the regular expression engine
-import re
+# import re
 
 # Define our content
-text = "The quick gray fox jumped over the lazy dog!"
+# text = "The quick gray fox jumped over the lazy dog!"
 
 # Find
-match = re.search("(gray|grey)", text, re.IGNORECASE)
+# match = re.search("(gray|grey)", text, re.IGNORECASE)
 
 # Get start and end of match
-match_start = match.span()[0]
-match_end = match.span()[1]
+# match_start = match.span()[0]
+# match_end = match.span()[1]
 
 # Replacement text
 # replace_text = "grey"
@@ -150,14 +150,31 @@ match_end = match.span()[1]
 # print("New text: " + new_text)
 
 # Import the regular expression engine
+# import re
+
+# Define our content
+# text = "The quick brown fox jumped over the lazy dog!"
+
+# Find
+# match = re.search("(gray|grey)", text, re.IGNORECASE)
+
+# Print the match
+# print(match.group(0))
+
+# Import the regular expression engine
 import re
 
 # Define our content
-text = "The quick brown fox jumped over the lazy dog!"
+text = "This is the house. It has red red paint."
 
-# Find
-match = re.search("(gray|grey)", text, re.IGNORECASE)
+# Regular expression to find duplicate words
+# Use prefix r before to treat as raw (unescaped) string
+regex = r"\b(\w+)\s+\1\b"
 
-# Print the match
-print(match.group(0))
+# Find any duplicate words
+matches = re.findall(regex, text, re.IGNORECASE)
+
+# Print the duplicate words
+for match in matches:
+    print(match)
 
