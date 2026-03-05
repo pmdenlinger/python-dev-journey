@@ -244,8 +244,14 @@
 # print(plus_test)  
 
 # Define the name
-name = "Robert"
+# name = "Robert"
 
 # Print a friendly message
-print("Hello, {}!".format(name))
+# print("Hello, {}!".format(name))
+
+# Define our greeting
+greeting = "Hello, {name}! It's currently {temp} and the time is {time}."
+
+# Print the message
+print(greeting.format(name = "Robert", temp = "54F", time = "3:42PM"))
 
