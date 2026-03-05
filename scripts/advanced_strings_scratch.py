@@ -255,8 +255,13 @@
 # Print the message
 # print(greeting.format(name = "Robert", temp = "54F", time = "3:42PM"))
 
-total = 6.95
-message = "Your total is ${:.2f}"
+# total = 6.95
+# message = "Your total is ${:.2f}"
 
-print(message.format(total))
+# print(message.format(total))
+
+first_day = "Monday"
+second_day = "Wednesday"
+
+print(f"We are closed this week from {first_day} till {second_day}.")
 
