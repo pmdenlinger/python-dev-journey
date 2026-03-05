@@ -203,17 +203,34 @@
 #     print("The string doesn't end with an exclamation point.")
 
 # Import the regular expression engine
+# import re
+
+# Our string
+# test = "Hello, World!"
+
+# Match
+# if re.match("e", test):
+#     print("re.match says it has an e in it")
+
+# Search
+# if re.search("e", test):
+#     print("re.search says it has an e in it")
+
+# Import the regular expression engine
 import re
 
 # Our string
-test = "Hello, World!"
+test = "The quick brown fox is fast!"
 
-# Match
-if re.match("e", test):
-    print("re.match says it has an e in it")
+# Split by spaces using the \s metacharacter 
+# Since we want to account for multiple spaces, we add +
+space_split = re.split("\s+", test)
+print(space_split)
 
-# Search
-if re.search("e", test):
-    print("re.search says it has an e in it")
+# Split by word using the non-word metacharacter
+# Since we want to account for multiple
+# non-word characters, we add +
+word_split = re.split("\W+", test)
+print(word_split)
     
 
