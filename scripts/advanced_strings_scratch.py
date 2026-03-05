@@ -250,8 +250,13 @@
 # print("Hello, {}!".format(name))
 
 # Define our greeting
-greeting = "Hello, {name}! It's currently {temp} and the time is {time}."
+# greeting = "Hello, {name}! It's currently {temp} and the time is {time}."
 
 # Print the message
-print(greeting.format(name = "Robert", temp = "54F", time = "3:42PM"))
+# print(greeting.format(name = "Robert", temp = "54F", time = "3:42PM"))
+
+total = 6.95
+message = "Your total is ${:.2f}"
+
+print(message.format(total))
 
