@@ -265,5 +265,8 @@
 
 # print(f"We are closed this week from {first_day} till {second_day}.")
 
-print(f"Testing evaluations in f-strings: {3 * 9}")
+# print(f"Testing evaluations in f-strings: {3 * 9}")
+
+word = "cool!"
+print(f"Testing functions in f-strings: {word.upper()}")
 
